@@ -39,6 +39,7 @@ Um das, auf unserer Variable ``||variables:Schild||`` gespeicherte Wort auf dem 
 ```blocks
 basic.forever(function () {
     basic.showString(Schild)
+    })
 input.onButtonPressed(Button.A, function () {
     Schild = "Open"
 })
