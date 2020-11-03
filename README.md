@@ -28,17 +28,21 @@ let Schild = "open"
 Nehme nun einen Block mit ``||variables: setze auf (__) ||`` und schiebe ihn in den Block ``||input: Wenn Knopf A gedrückt ||`` aus dem Bereich ``||input: Eingaben ||``
 Der Block ``||variables: setze auf (__) ||`` soll wieder so wie im vorherigen Schritt ausgefüllt werden.
 ```blocks
-let Schild = ""
+let Schild = "open"
 input.onButtonPressed(Button.A, function () {
     Schild = "Open"
 })
 ```
 ## Schritt 3: Inhalt der Variablen ausgeben.
-Um das, auf unserer Variable ``||variables:Schild||`` gespeicherte Wort auf dem Calliope anzeigen zu lassen. Benötigen wir wieder ``||basic:Zeige Text||`` aus dem Bereich ``||basic:Grundlagen|`` dieser Block soll Dauerhaft bearbeitet werden, also kommt er in die ``||basic:Dauerhaft||`` Schleife, welche ebenfalls im Bereich ``||basic:Grundlagen||`` zu finden ist. 
+Um das, auf unserer Variable ``||variables:Schild||`` gespeicherte Wort auf dem Calliope anzeigen zu lassen. Benötigen wir wieder ``||basic:Zeige Text||`` aus dem Bereich ``||basic:Grundlagen|`` dieser Block soll Dauerhaft bearbeitet werden, also kommt er in die ``||basic:Dauerhaft||`` Schleife, welche ebenfalls im Bereich ``||basic:Grundlagen||`` zu finden ist. In den Block ``||basic:Zeige Text||`` kommt nun unsere Variable ``||variables:Schild||``. Nach dem Drücken von Knopf A sollte der Calliope im Simulator open anzeigen.
 
 ```blocks
 basic.forever(function () {
     basic.showString(Schild)
+input.onButtonPressed(Button.A, function () {
+    Schild = "Open"
+})
+let Schild = "open"
 })
 ```
 ## Schritt 4 Das Schild umschalten
